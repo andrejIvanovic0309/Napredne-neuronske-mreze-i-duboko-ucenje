@@ -1,0 +1,72 @@
+{
+    "layers": [
+        {
+            "layerType": "INPUT",
+            "channels": 1,
+            "width": 48,
+            "height": 48
+        },
+        {
+            "layerType": "CONVOLUTIONAL",
+            "channels": 32,
+            "filterWidth": 3,
+            "filterHeight": 3,
+            "padding": 1,
+            "activation": "TANH"
+        },
+        {
+            "layerType": "MAXPOOLING",
+            "filterWidth": 2,
+            "filterHeight": 2,
+            "stride": 2
+        },
+        {
+            "layerType": "CONVOLUTIONAL",
+            "channels": 64,
+            "filterWidth": 3,
+            "filterHeight": 3,
+            "padding": 1,
+            "activation": "TANH"
+        },
+        {
+            "layerType": "MAXPOOLING",
+            "filterWidth": 2,
+            "filterHeight": 2,
+            "stride": 2
+        },
+        {
+            "layerType": "CONVOLUTIONAL",
+            "channels": 128,
+            "filterWidth": 3,
+            "filterHeight": 3,
+            "padding": 1,
+            "activation": "TANH"
+        },
+        {
+            "layerType": "MAXPOOLING",
+            "filterWidth": 2,
+            "filterHeight": 2,
+            "stride": 2
+        },
+        {
+            "layerType": "FLATTEN"
+        },
+        {
+            "layerType": "FULLY_CONNECTED",
+            "width": 64,
+            "activation": "TANH"
+        },
+        {
+            "layerType": "FULLY_CONNECTED",
+            "width": 32,
+            "activation": "TANH"
+        },
+        {
+            "layerType": "OUTPUT",
+            "width": 7,
+            "activation": "SOFTMAX"
+        }
+    ],
+    "lossFunction": "CROSS_ENTROPY",
+    "networkType": "CONVOLUTIONAL"
+}

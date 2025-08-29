@@ -1,0 +1,83 @@
+{
+    "layers": [
+        {
+            "layerType": "INPUT",
+            "channels": 3,
+            "width": 48,
+            "height": 48
+        },
+        {
+            "filterWidth": 3,
+            "layerType": "CONVOLUTIONAL",
+            "filterHeight": 3,
+            "channels": 64,
+            "stride": 1,
+            "activation": "TANH"
+        },
+        {
+            "filterWidth": 2,
+            "layerType": "MAXPOOLING",
+            "filterHeight": 2,
+            "stride": 2
+        },
+        {
+            "filterWidth": 3,
+            "layerType": "CONVOLUTIONAL",
+            "filterHeight": 3,
+            "channels": 128,
+            "stride": 1,
+            "activation": "TANH"
+        },
+        {
+            "filterWidth": 2,
+            "layerType": "MAXPOOLING",
+            "filterHeight": 2,
+            "stride": 2
+        },
+        {
+            "filterWidth": 3,
+            "layerType": "CONVOLUTIONAL",
+            "filterHeight": 3,
+            "channels": 256,
+            "stride": 1,
+            "activation": "TANH"
+        },
+        {
+            "filterWidth": 2,
+            "layerType": "MAXPOOLING",
+            "filterHeight": 2,
+            "stride": 2
+        },
+        {
+            "filterWidth": 3,
+            "layerType": "CONVOLUTIONAL",
+            "filterHeight": 3,
+            "channels": 512,
+            "stride": 1,
+            "activation": "TANH"
+        },
+        {
+            "filterWidth": 2,
+            "layerType": "MAXPOOLING",
+            "filterHeight": 2,
+            "stride": 2
+        },
+        {
+            "layerType": "FULLY_CONNECTED",
+            "width": 128,
+            "activation": "TANH"
+        },
+        {
+            "layerType": "FULLY_CONNECTED",
+            "width": 64,
+            "activation": "TANH"
+        },
+        {
+            "layerType": "OUTPUT",
+            "width": 7,
+            "activation": "SOFTMAX"
+        }
+    ],
+    "lossFunction": "CROSS_ENTROPY",
+    "networkType": "CONVOLUTIONAL"
+}
